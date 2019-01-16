@@ -1,9 +1,11 @@
-Truth Tables
-============
-
+# Handy Logic Doodahs-Truth Tables
 [![Build Status](https://travis-ci.org/MasterOdin/TruthTables.svg?branch=master)](https://travis-ci.org/MasterOdin/TruthTables) [![Coverage Status](https://coveralls.io/repos/github/MasterOdin/TruthTables/badge.svg?branch=master)](https://coveralls.io/github/MasterOdin/TruthTables?branch=master)
+## Authors
+2016:
+Matt Peveler
 
-This is a flask app (with a python module backing it) that can be used to generate Truth Tables for any number of given logical formulas.
+## About
+This is a flask app (with a python module backing it) that can be used to generate Truth Tables for any number of given logical formulas. This is part of the handy logic doodahs series of Automated Theorem Provers.
 
 ![Flask App](https://raw.githubusercontent.com/MasterOdin/TruthTables/master/static/screenshot.png)
 
