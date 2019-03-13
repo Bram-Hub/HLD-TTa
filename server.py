@@ -67,5 +67,4 @@ def generate_table():
                            table_statements=table.get_table_assessment())
 
 if __name__ == '__main__':
-    FLASK_APP.debug = True
-    FLASK_APP.run()
+    FLASK_APP.run(debug = True)

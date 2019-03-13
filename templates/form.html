@@ -1,17 +1,16 @@
 <script type="text/javascript">
     function addRow() {
         $('#add').remove();
-        $('#formulas').append("<input type='text' name='formula[]' placeholder='Formula' /> <a id='add' onclick='addRow()'>+</a><br />");
+        $('#formulas').append("<input type='text' name='formula[]' placeholder='Formula' /> <button id='add' onclick='addRow()' class='button'>+</button><br />");
     }
 </script>
 
 <form id='formula-form' action="submit" method="POST">
-    Available options: A, not(A), and(A, B), or(A, B), if(A, B), iff(A, B)
     <div id="formulas">
     {% for formula in formulas %}
         <input type="text" name="formula[]" value="{{ formula }}" placeholder="Formula" /><br />
     {% endfor %}
-        <input type="text" name="formula[]" placeholder="Formula" /> <a id="add" onclick="addRow()">+</a><br />
+        <input type="text" name="formula[]" placeholder="Formula" /> <button id="add" onclick="addRow()" class="button">+</button><br />
     </div>
     <input type="submit" value="Submit" />
 </form>

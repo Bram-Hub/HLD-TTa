@@ -1,0 +1,48 @@
+body {
+    font-size: 14pt;
+    position: relative;
+    min-height: 96vh;
+}
+th, td {
+    border: 1px solid black;
+    /*text-align: center;*/
+    vertical-align: middle;
+    padding: 5px;
+    font-family: "Consolas", monospace;
+}
+
+#header {
+    width: 375px;
+}
+
+input[type=text] {
+    font-size: 12pt;
+    margin-bottom: 5px;
+	width: 80%;
+	max-width: 510px ;
+}
+.button {
+	/*border-style: outset;*/
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-column {
+    font-weight: 300;
+    float: left;
+    width: 50%;
+    color: #AFAFAF;
+}
+
+.l {
+    text-align: left;
+}
+
+.r {
+    text-align: right;
+}
