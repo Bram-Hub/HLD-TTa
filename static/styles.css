@@ -1,7 +1,19 @@
+/*
+COLORS ALLOWED
+Cerulean Blue #4484CE
+Aluminum #D9D9D9
+Light Yellow #F9CF00
+Tangerine #F19F4D
+White #FFF
+Black #000
+*/
+
 body {
     font-size: 14pt;
-    position: relative;
-    min-height: 96vh;
+    position: absolute;
+    min-height: 98vh;
+    margin: 0px;
+    width: 100%;
 }
 th, td {
     border: 1px solid black;
@@ -13,6 +25,19 @@ th, td {
 
 #header {
     width: 375px;
+    margin: 8px;
+    color: #FFF;
+}
+
+#header-wrapper {
+    position: absolute;
+    width: 100%;
+    background: #4484CE;
+}
+
+#content-wrapper {
+    padding-top: 100px;
+    margin: 8px;
 }
 
 input[type=text] {

@@ -1,41 +1,50 @@
-{% include 'header.html' %}
-Enter formulas to evaulate: <br/>
-Available options: A, not(A), and(A, B), or(A, B), if(A, B), iff(A, B) <br/> <br/>
-Logical Formulas:<br />
-{{ form }}
-<br /><br />
-<table cellspacing="0 px">
-    <tr>
-    {% for symbol in table.symbols %}
-        <th>{{ symbol }}</th>
+<div id="header-wrapper">
+    {% include 'header.html' %}
+</div>
+<div id="content-wrapper">
+    Enter formulas to evaulate: <br/>
+    Available options: A, not(A), and(A, B), or(A, B), if(A, B), iff(A, B) <br/> <br/>
+    Logical Formulas:<br />
+    {{ form }}
+    <br /><br />
+    <table cellspacing="0 px">
+        <tr>
+        {% for symbol in table.symbols %}
+            <th>{{ symbol }}</th>
+        {% endfor %}
+        {% for formula in formulas %}
+            <th>{{ formula }}</th>
+        {% endfor %}
+        </tr>
+    {% for i in range(table.combinations|length) %}
+        <tr>
+        {% for j in table.combinations[i] %}
+            <td>
+            {% if j %}
+                <span style="color: green">T</span>
+            {% else %}
+                <span style="color: red">F</span>
+            {% endif %}
+            </td>
+        {% endfor %}
+        {% for row in rows[i] %}
+            <td>
+                <!-- This is where you would need to be in order to allow the user to input
+                their own F and T symbols 
+
+                in order to display as normal use {{row}} -->
+                <!-- <input type="text" /> -->
+                {{ row }}
+            </td>
+        {% endfor %}
+        </tr>
     {% endfor %}
-    {% for formula in formulas %}
-        <th>{{ formula }}</th>
+    </table>
+    <br />
+    {%  for statement in table_statements %}
+    {{ statement }}<br />
     {% endfor %}
-    </tr>
-{% for i in range(table.combinations|length) %}
-    <tr>
-    {% for j in table.combinations[i] %}
-        <td>
-        {% if j %}
-            <span style="color: green">T</span>
-        {% else %}
-            <span style="color: red">F</span>
-        {% endif %}
-        </td>
-    {% endfor %}
-    {% for row in rows[i] %}
-        <td>
-            {{ row }}
-        </td>
-    {% endfor %}
-    </tr>
-{% endfor %}
-</table>
-<br />
-{%  for statement in table_statements %}
-{{ statement }}<br />
-{% endfor %}
-<br />
-<br />
+    <br />
+    <br />
+</div>
 {% include 'footer.html' %}

@@ -131,6 +131,7 @@ def runner(formulas, display_connectives=True):
     :param display_connectives:
     :return:
     """
+    print(formulas)
     if isinstance(formulas, string_types):
         formulas = [formulas]
 

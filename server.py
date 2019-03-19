@@ -38,6 +38,7 @@ def generate_table():
 
     pretty = [truthtables.pretty_print(formula) for formula in table.formulas]
 
+    # creatins rows to be displayed on the table
     rows = []
     for i in range(len(table.combinations)):
         rows.append([])
